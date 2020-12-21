@@ -3,7 +3,7 @@ $(function(){
   let length = document.querySelectorAll('#bxslider .slide-inner .slide-item').length;
   let htmlSLideIndicators = ``;
   for(let i=0 ; i<length ; i++){
-    htmlSLideIndicators+=`<li data-target="#bxslider"${i===current ? ' class="active"': ''}></li>`;
+    htmlSLideIndicators+=`<li data-target="#bxslider" data-slide-to="${i}"${i===current ? ' class="active"': ''}></li>`;
   }
   let ol = document.createElement('ol');
   ol.className = 'slide-indicators';
